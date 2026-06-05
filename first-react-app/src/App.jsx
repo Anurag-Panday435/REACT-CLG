@@ -51,13 +51,254 @@
 // }
 // export default App
 //-----------------------------------------------------
+// import React from 'react'
+// import Home from './Home'
+
+// const App = () => {
+//   return (
+//     <div>Home</div>
+//   )
+// }
+// export default App
+//------------------------------------------------------------
+
+// import React from 'react'
+// import New from './New'
+// import {About} from './New'
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>App</h1>
+//       <New/>
+//        <About /> 
+//     </div>
+//   )
+// }
+
+// export default App
+//-----------------------------------------
+
+// import React from 'react'
+// import Home from './Home'
+
+// const App = () => {
+//   let data="hello"
+//   return (
+//     <div>
+//       <Home a={data}/>
+//     </div>
+//   )
+// }
+
+// export default App
+//===============================================
+
+// import React, { useState } from 'react'
+// import Home from './Home' 
+
+// const App = () => {
+//   // 1. State hook: count ki initial value 0 hai
+//   let [count, SetCount] = useState(0)
+
+//   // 2. Click handler function: har click par count 1 badhega
+//   function fun1() {
+//     SetCount(count + 1)
+//   }
+
+//   return (
+//     <div>
+//       <h1>{count}</h1>
+//       {/* 3. Button par click hone par fun1 trigger hoga */}
+//       <button onClick={fun1}>click</button>
+      
+//       {/* 4. Home component me count variable ko prop ki tarah pass kiya */}
+//       <Home count={count}/>
+//     </div>
+//   )
+// }
+
+// export default App
+//------------------------------------------------
+// import React, { useState } from 'react'
+// import Home from './Home' 
+
+// const App = () => {
+  
+//   let [count, SetCount] = useState(0)
+
+//   function fun1() {
+//     SetCount(count + 1)
+//   }
+//    function fun2() {
+//     SetCount(count - 1)
+//   }
+
+//   function fun3() {
+//     SetCount(0)
+//   }
+
+//   return (
+//     <div>
+//       <h1>{count}</h1>
+//       {}
+//       <button onClick={fun1}>++</button>
+//        <button onClick={fun2}>--</button>
+//        <button onClick={fun3}>Reset</button>
+      
+//       {}
+//       <Home count={count}/>
+//     </div>
+//   )
+// }
+
+// export default App
+//------------------------------------------------------------
+
+// import React, { useState, useEffect } from "react";
+
+// function Stopwatch() {
+//   // State for time
+//   const [time, setTime] = useState(0);
+
+//   // State for running status
+//   const [isRunning, setIsRunning] = useState(false);
+
+//   useEffect(() => {
+//     let interval;
+
+//     // Start interval when stopwatch is running
+//     if (isRunning) {
+//       interval = setInterval(() => {
+//         setTime((prevTime) => prevTime + 1);
+//       }, 1000);
+//     }
+
+//     // Cleanup interval
+//     return () => clearInterval(interval);
+
+//   }, [isRunning]);
+
+//   // Start function
+//   const handleStart = () => {
+//     setIsRunning(true);
+//   };
+
+//   // Stop function
+//   const handleStop = () => {
+//     setIsRunning(false);
+//   };
+
+//   // Reset function
+//   const handleReset = () => {
+//     setIsRunning(false);
+//     setTime(0);
+//   };
+
+//   return (
+//     <div style={{ textAlign: "center", marginTop: "50px" }}>
+//       <h1>Stopwatch</h1>
+
+//       <h2>{time} sec</h2>
+
+//       <button onClick={handleStart}>
+//         Start
+//       </button>
+
+//       <button onClick={handleStop} style={{ marginLeft: "10px" }}>
+//         Stop
+//       </button>
+
+//       <button onClick={handleReset} style={{ marginLeft: "10px" }}>
+//         Reset
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default Stopwatch;
+//------------------------------------------------
+// import React,{useState} from 'react'
+
+// const App = () => {
+//   let [input,SetInput]=  useState("")
+//   let [data,SetData]=  useState("")
+//   function fun1(e){
+//  //    console.log(e.target.type);
+
+//       SetData(e.target.value)
+//   }
+//   function done(){
+//      SetInput(data)
+//   }
+//   return (
+//     <div>
+//       <h2>{input}</h2>
+//       <input type='text' onChange={fun1}/>
+//       <button onClick={done}>Click</button>
+//       {}
+//     </div>
+//   )
+// }
+// export default App.
+
+//--------------------------------------------------------------
+// import React, { useState } from 'react'
+// import './App.css'
+// const App = () => {
+//       let [input,SetInput]=      useState(
+//         {name:"",email:"",passWord:""})
+
+
+//     function fun1(e){
+//        console.log(e.target);
+//        let {name,value}=    e.target
+//        SetInput({...input,[name]:value})
+        
+//         console.log(input);
+        
+        
+//         // console.log(e.target.value);
+        
+        
+//     }
+//   return (
+//     <div>
+//         <form>
+//             <input type='text' name='name' value={input.name}  onChange={fun1} placeholder='Enter your name'/>
+//             <br></br>
+//             <br></br>
+
+//             <input type='email'   name='email' value={input.email}  onChange={fun1} placeholder='Enter your email'/>
+//             <br></br>
+//             <br></br>
+
+//             <input type='password'  name='passWord' value={input.passWord}  onChange={fun1} placeholder='Enter your password'/>
+//             <br></br>
+//             <br></br>
+
+            
+//             <button>submit</button>
+
+
+
+//         </form>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//----------------------------------------------------------
+import { useEffect } from "react"
+import { useState } from "react"
+
 import React from 'react'
-import Home from './Home'
+import Counter from './Counter';
 
 const App = () => {
   return (
-    <div>Home</div>
+    <div><Counter /> </div>
   )
 }
+
 export default App
-rafce
