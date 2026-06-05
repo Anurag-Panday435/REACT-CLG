@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Counter.css";
 import Home from "./Home";
 
-const Todo = () => {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   const increment = () => {
