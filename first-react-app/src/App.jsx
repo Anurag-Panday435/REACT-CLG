@@ -289,35 +289,75 @@
 // export default App
 
 //----------------------------------------------------------
-import { useEffect } from "react"
-import { useState } from "react"
+// import { useEffect } from "react"
+// import { useState } from "react"
 
-import React from 'react'
-import Home from "./Home"
+// import React from 'react'
+// import Home from "./Home"
 
-//main-> app-> A-> b-> C
+// //main-> app-> A-> b-> C
 
 
 
-import NavBar from "./NavBar"
+// import NavBar from "./NavBar"
 
-import { Route, Routes } from "react-router-dom"
-import Cart from "./Cart"
+// import { Route, Routes } from "react-router-dom"
+// import Cart from "./Cart"
 
-const App = () => {
-  let [apiData,SetApiData] =   useState([])
- let [cart,SetCart]= useState([])
-  return (
+// const App = () => {
+//   let [apiData,SetApiData] =   useState([])
+//  let [cart,SetCart]= useState([])
+//   return (
 
-    <div>
-      <NavBar/>
-      <Routes>
-        <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
-        <Route path="/cart" element={<Cart cart={cart}/>}/>
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//         <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
+//         <Route path="/cart" element={<Cart cart={cart}/>}/>
 
-      </Routes>
-    </div>
-  )
-}
+//       </Routes>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
+//------------------------------------------------------------------
+
+// import React,{useMemo} from 'react'
+// import useCounter from './useCounter'
+
+// const App = () => {
+//   let{count, inc, dec, reset}= useCounter(0)
+  // this is the problem for web site slow
+  // function call(){
+  //   let res=0
+  //   for(let i=0;i<1000000000;i++){
+  //     res+=i;
+  //   }
+  //   return res
+  // }
+  // let total= call()[]
+//   let total = useMemo(()=>{  // this is the solution of the above problem
+//     let res=0
+//     for(let i=0;i<1000;i++){
+//       res+=i
+//     }
+//     return res;
+//   },[])
+
+
+
+
+
+//   return (
+//     <div>{count}
+//     <button onClick={inc}>++</button>
+//     <button onClick={dec}>--</button>
+//     <button onClick={reset}>reset</button>
+//     </div>
+//   )
+// }
+
+// export default App
+//-------------------------------------------
+
